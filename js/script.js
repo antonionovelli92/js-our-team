@@ -26,13 +26,25 @@ Buon lavoro!
 const teams = [
     {
         names: ['Wayne Barnett', 'Angela Caroll', 'Walter Gordon', 'Angela Lopez', 'Scott Estrada', 'Barbara Ramos'],
-        role: ['Founder & Ceo', 'Chief Editor', 'Office Manager', 'Social Media Manager', 'Developer', 'Graphic Design']
+        roles: ['Founder & Ceo', 'Chief Editor', 'Office Manager', 'Social Media Manager', 'Developer', 'Graphic Design']
     }
 ];
 console.log(teams[0]['names'][0]); // Nome di wayne barnett;
 
 
+for (let i = 0; i < teams.length; i++) {
+    const currentTeam = teams[i];
 
+    // stampo i nomi del team
+    for (let member of currentTeam.names) {
+        console.log(member);
+    }
+    // stampo i nuomi dei 'roles'
+    for (let role of currentTeam.roles) {
+        console.log(role);
+    }
+
+}
 
 
 
