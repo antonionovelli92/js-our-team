@@ -21,21 +21,40 @@ E ricordiamoci che console.log() è nostro amico!
 Buon lavoro! 
 */
 
+// Creo la lista dello staff:
+
 const teams = [
     {
-        staff: [
-            { firstName: 'Wayne', lastName: 'Barnett', role: 'Founder & CEO', photo: `img` },
-            { firstName: 'Angela', lastName: 'Caroll', role: 'Chied Editor', photo: `img` },
-            { firstName: 'Walter', lastName: 'Gordon', role: 'Office Manager', photo: `img` },
-        ]
-    },
-    {
-        staff: [
-            { firstName: 'Angela', lastName: 'Lopez', role: 'Social Media Manager', photo: `img` },
-            { firstName: 'Scott', lastName: 'Estrada', role: 'Developer', photo: `img` },
-            { firstName: 'Barbara', lastName: 'Ramos', role: 'Graphic Designer', photo: `img` },
-        ]
-    },
-
+        names: ['Wayne Barnett', 'Angela Caroll', 'Walter Gordon', 'Angela Lopez', 'Scott Estrada', 'Barbara Ramos'],
+        role: ['Founder & Ceo', 'Chief Editor', 'Office Manager', 'Social Media Manager', 'Developer', 'Graphic Design']
+    }
 ];
-console.table(teams)
+console.log(teams[0]['names'][0]); // Nome di wayne barnett;
+
+
+
+
+
+
+
+
+
+
+
+
+// stampiamo lo staff
+// console.log(teams[0].staff[1]);
+// {
+//     staff: [
+//         { firstName: 'Wayne', lastName: 'Barnett', role: 'Founder & CEO', photo: `img` },
+//         { firstName: 'Angela', lastName: 'Caroll', role: 'Chied Editor', photo: `img` },
+//         { firstName: 'Walter', lastName: 'Gordon', role: 'Office Manager', photo: `img` },
+//     ]
+// },
+// // {
+// //     staff: [
+// //         { firstName: 'Angela', lastName: 'Lopez', role: 'Social Media Manager', photo: `img` },
+// //         { firstName: 'Scott', lastName: 'Estrada', role: 'Developer', photo: `img` },
+// //         { firstName: 'Barbara', lastName: 'Ramos', role: 'Graphic Designer', photo: `img` },
+// //     ]
+// // },
