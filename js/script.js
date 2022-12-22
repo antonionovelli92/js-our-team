@@ -21,52 +21,73 @@ E ricordiamoci che console.log() è nostro amico!
 Buon lavoro! 
 */
 
+
+
+
+const staffElement = document.getElementById('name');
+const roleElement = document.getElementById('ruoli');
+
 // Creo la lista dello staff:
 
-const teams = [
+const teamMembers = [
     {
-        names: ['Wayne Barnett', 'Angela Caroll', 'Walter Gordon', 'Angela Lopez', 'Scott Estrada', 'Barbara Ramos'],
-        roles: ['Founder & Ceo', 'Chief Editor', 'Office Manager', 'Social Media Manager', 'Developer', 'Graphic Design']
+        name: 'Wayne Barnett',
+        role: 'Founder & CEO',
+        src: 'img/wayne-barnett-founder-ceo.jpg'
+    }, {
+        name: 'Angela Caroll',
+        role: 'Chief Editor',
+        src: 'img/angela-caroll-chief-editor.jpg'
+    }, {
+        name: 'Walter Gordon',
+        role: 'Office Manager',
+        src: 'img/walter-gordon-office-manager.jpg'
+    }, {
+        name: 'Angela Lopez',
+        role: 'Social Media Manager',
+        src: 'img/angela-lopez-social-media-manager.jpg'
+    }, {
+        name: 'Scott Estrada',
+        role: 'Developer',
+        src: 'img/scott-estrada-developer.jpg'
+    }, {
+        name: 'Barbara Ramos',
+        role: 'Graphic Design',
+        src: 'img/barbara-ramos-graphic-designer.jpg'
     }
-];
-console.log(teams[0]['names'][0]); // Nome di wayne barnett;
+]
 
+const teamList = document.querySelector('.team-container');
 
-for (let i = 0; i < teams.length; i++) {
-    const currentTeam = teams[i];
+let listItems = '';
 
-    // stampo i nomi del team
-    for (let member of currentTeam.names) {
-        console.log(member);
-    }
-    // stampo i nuomi dei 'roles'
-    for (let role of currentTeam.roles) {
-        console.log(role);
-    }
+// Stampare su console i dati di tutti i memebri:
+for (let i = 0; i < teamMembers.length; i++) {
+    const member = teamMembers[i];
+    listItems += `
+    <div class="team-card">
+        <div class="card-image">
+            <img src="${member.src}" alt="${member.name}">
+        </div>
+           <div class="card-text">
+                <h3>${member.name}</h3>
+                <p>${member.role}</p>
+            </div>
+        </div> 
+    </div>
+`;
+
+    console.log(member.name);
+    console.log(member.role);
+    console.log(member.src);
+
 
 }
+teamList.innerHTML = listItems;
 
 
 
-
-
-
-
-
-
-// stampiamo lo staff
-// console.log(teams[0].staff[1]);
-// {
-//     staff: [
-//         { firstName: 'Wayne', lastName: 'Barnett', role: 'Founder & CEO', photo: `img` },
-//         { firstName: 'Angela', lastName: 'Caroll', role: 'Chied Editor', photo: `img` },
-//         { firstName: 'Walter', lastName: 'Gordon', role: 'Office Manager', photo: `img` },
-//     ]
-// },
-// // {
-// //     staff: [
-// //         { firstName: 'Angela', lastName: 'Lopez', role: 'Social Media Manager', photo: `img` },
-// //         { firstName: 'Scott', lastName: 'Estrada', role: 'Developer', photo: `img` },
-// //         { firstName: 'Barbara', lastName: 'Ramos', role: 'Graphic Designer', photo: `img` },
-// //     ]
-// // },
+//     //! ad ogni giro la singola "key", in questo caso non va bene a causa di un diverso dato alla fine, l'immagine.
+//     for (let key in member) {
+//         console.log(member[key]);
+//     }
